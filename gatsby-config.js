@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Pramod NAIK.`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Pramod Naik`,
+      summary: `Bangalore|Clermont-Ferrand|Goa.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Sharing my experience`,
     siteUrl: `http://localhost:8000/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `pramod-naik`,
     },
   },
   pathPrefix: "/blogs",
@@ -31,6 +31,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -49,6 +50,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -70,12 +72,26 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    `react-icons`,
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  
-  
-  
 }
